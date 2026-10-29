@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peach & Co. | Little Things. Lovely Living.</title>
+  <meta name="description" content="Peach & Co. is an aesthetic boutique offering thoughtfully designed notebooks, handcrafted ceramic mugs, everyday tote bags, and scented candles for warm, intentional living.">
+
+  <!-- Google Fonts: Cormorant Garamond for elegant boutique serif headings, Plus Jakarta Sans for clean readable body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Handcrafted with love &bull; Free boutique packaging on all orders &bull; Slow, lovely living</p>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" id="brand-logo">
+        <span class="logo-text">Peach &amp; Co.</span>
+        <span class="logo-sub">Lifestyle Boutique</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Button & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-counter" id="cart-count">0</span>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Add to Cart Toast Notification -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <p class="toast-title" id="toast-title">Added to Cart!</p>
+      <p class="toast-message" id="toast-message">Your item was added successfully.</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-tag">Aesthetic Living Essentials</span>
+          <h1 class="hero-title">Little Things. <br><em>Lovely Living.</em></h1>
+          <p class="hero-description">
+            Welcome to Peach &amp; Co. We craft small-batch lifestyle goods—from textured journals and artisanal ceramics to gentle soy candles—designed to bring warmth and mindfulness into your daily rituals.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#products" class="btn btn-primary" id="hero-explore-btn">
+              Explore Collection
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-outline">Our Story</a>
+          </div>
+          
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <span class="feature-dot"></span>
+              <span>100% Organic Materials</span>
+            </div>
+            <div class="hero-feature-item">
+              <span class="feature-dot"></span>
+              <span>Handcrafted Small Batches</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="images/hero-lifestyle.jpg" alt="Peach & Co. aesthetic lifestyle setup with coffee, notebook, tote bag, and candle" class="hero-img">
+            <div class="hero-badge">
+              <span class="badge-title">Handmade with care</span>
+              <span class="badge-subtitle">New Autumn Collection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Curated Essentials</span>
+          <h2 class="section-title">The Boutique Collection</h2>
+          <p class="section-desc">Each piece is thoughtfully crafted to add quiet beauty and gentle joy to your workspace and home.</p>
+        </div>
+
+        <!-- Responsive CSS Grid for Product Cards -->
+        <div class="products-grid" id="products-grid">
+          
+          <!-- Product Card 1 -->
+          <article class="product-card" data-product-id="1" data-product-name="Aesthetic Notebook" data-product-price="649">
+            <div class="product-image-container">
+              <img src="images/aesthetic-notebook.jpg" alt="Aesthetic Notebook in pastel peach cloth cover" class="product-img">
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Stationery &bull; Linen Hardcover</span>
+              <h3 class="product-title">Aesthetic Notebook</h3>
+              <p class="product-summary">160 pages of heavy cream unlined paper with ribbon bookmark and gold foil accent.</p>
+              <div class="product-footer">
+                <div class="product-price">₹649</div>
+                <button type="button" class="btn-add-cart" id="add-to-cart-1" aria-label="Add Aesthetic Notebook to Cart">
+                  <span>Add to Cart</span>
+                  <svg class="cart-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card" data-product-id="2" data-product-name="Ceramic Coffee Mug" data-product-price="549">
+            <div class="product-image-container">
+              <img src="images/ceramic-coffee-mug.jpg" alt="Handcrafted speckled ceramic coffee mug" class="product-img">
+              <span class="product-tag">Artisan</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kitchenware &bull; 320ml</span>
+              <h3 class="product-title">Ceramic Coffee Mug</h3>
+              <p class="product-summary">Hand-thrown stoneware mug with speckled peach glaze and comforting ergonomic handle.</p>
+              <div class="product-footer">
+                <div class="product-price">₹549</div>
+                <button type="button" class="btn-add-cart" id="add-to-cart-2" aria-label="Add Ceramic Coffee Mug to Cart">
+                  <span>Add to Cart</span>
+                  <svg class="cart-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card" data-product-id="3" data-product-name="Everyday Tote Bag" data-product-price="899">
+            <div class="product-image-container">
+              <img src="images/everyday-tote-bag.jpg" alt="Everyday canvas tote bag with botanical illustration" class="product-img">
+              <span class="product-tag">Eco-Friendly</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Accessories &bull; 100% Canvas</span>
+              <h3 class="product-title">Everyday Tote Bag</h3>
+              <p class="product-summary">Sturdy organic cotton canvas tote with interior pocket and botanical line art print.</p>
+              <div class="product-footer">
+                <div class="product-price">₹899</div>
+                <button type="button" class="btn-add-cart" id="add-to-cart-3" aria-label="Add Everyday Tote Bag to Cart">
+                  <span>Add to Cart</span>
+                  <svg class="cart-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card" data-product-id="4" data-product-name="Scented Candle" data-product-price="799">
+            <div class="product-image-container">
+              <img src="images/scented-candle.jpg" alt="Aesthetic hand-poured soy scented candle in amber glass" class="product-img">
+              <span class="product-tag">Pure Soy</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Home Fragrance &bull; 45hr Burn</span>
+              <h3 class="product-title">Scented Candle</h3>
+              <p class="product-summary">Warm notes of ripe white peach, creamy amber, and vanilla bean in amber apothecary glass.</p>
+              <div class="product-footer">
+                <div class="product-price">₹799</div>
+                <button type="button" class="btn-add-cart" id="add-to-cart-4" aria-label="Add Scented Candle to Cart">
+                  <span>Add to Cart</span>
+                  <svg class="cart-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-subtitle">Our Philosophy</span>
+            <h2 class="section-title">Made for Your Everyday Moments</h2>
+            <p class="about-text">
+              Peach &amp; Co. was born from a desire to slow down and cherish the quiet moments of everyday life. Whether it is penning your morning reflections in a linen-bound journal, savoring a warm brew from a rustic ceramic mug, or lighting a soothing soy candle at dusk, we believe in objects that bring calm and beauty to your routine.
+            </p>
+            <p class="about-text">
+              We partner with local artisans to produce small-batch goods using natural, eco-conscious materials. Every item in our boutique is chosen with purpose, designed with care, and made to last.
+            </p>
+            
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="value-icon">🌿</div>
+                <h4>Mindfully Sourced</h4>
+                <p>Natural cotton, non-toxic soy wax, and plastic-free packaging.</p>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">🏺</div>
+                <h4>Artisan Crafted</h4>
+                <p>Small-batch pieces made by independent creators who love their craft.</p>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">✨</div>
+                <h4>Warm Minimalism</h4>
+                <p>Subtle peach hues and earthy chocolate tones for timeless living.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-quote-card">
+            <div class="quote-symbol">&ldquo;</div>
+            <blockquote class="boutique-quote">
+              The little things are not just things; they are the heartbeats of a warm and cozy home.
+            </blockquote>
+            <p class="quote-author">— The Peach &amp; Co. Studio</p>
+            
+            <div class="boutique-stats">
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Natural Soy Wax</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">4.9/5</span>
+                <span class="stat-label">Customer Love</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">Zero</span>
+                <span class="stat-label">Plastic Packaging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Find answers about our boutique collections, order modifications, and contacting our team.</p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
+              <span class="faq-title">What products do you sell?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+              <div class="faq-content">
+                <p>We curate aesthetic lifestyle essentials designed for cozy and mindful living. Our current core collection includes unlined linen-bound notebooks, hand-thrown ceramic coffee mugs, heavyweight organic cotton tote bags, and hand-poured soy scented candles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+              <span class="faq-title">How can I contact the store?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+              <div class="faq-content">
+                <p>You can easily reach our friendly support team by using the contact form right below on this page, or by sending an email to <strong>hello@peachandco.boutique</strong>. We respond to all inquiries within 24 business hours.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+              <span class="faq-title">Can I change my order?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+              <div class="faq-content">
+                <p>Yes, certainly! If your order has not been dispatched yet, you can modify items, quantities, or your delivery address. Please reach out through our contact form within 4 hours of placing your order so our studio team can assist you right away.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header text-center">
+            <span class="section-subtitle">We'd Love to Hear From You</span>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-desc">Have a question about our products, collaborations, or custom gift orders? Drop us a friendly note below.</p>
+          </div>
+
+          <!-- Contact Form with JS Validation -->
+          <form class="contact-form" id="contact-form" novalidate>
+            <!-- Form Success Message -->
+            <div class="form-feedback form-success" id="form-success-msg" style="display: none;" role="alert">
+              <span class="feedback-icon">🎉</span>
+              <div>
+                <strong>Thank you! Your message has been sent.</strong>
+                <p>Our team will get back to you shortly at your email address.</p>
+              </div>
+            </div>
+
+            <!-- Form General Error Message -->
+            <div class="form-feedback form-error-summary" id="form-error-summary" style="display: none;" role="alert">
+              <span class="feedback-icon">⚠️</span>
+              <div>
+                <strong>Please check the form:</strong>
+                <p>Some fields require your attention before submitting.</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Maya Sharma">
+              <small class="error-message" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. maya@example.com">
+              <small class="error-message" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Your Message <span class="required">*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Tell us how we can help you..."></textarea>
+              <small class="error-message" id="message-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span>Send Message</span>
+              <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Modal / Summary Drawer (Session tracker) -->
+  <div class="cart-modal" id="cart-modal" aria-hidden="true">
+    <div class="cart-modal-overlay" id="cart-modal-overlay"></div>
+    <div class="cart-modal-panel">
+      <div class="cart-modal-header">
+        <h3 class="cart-modal-title">Your Boutique Bag</h3>
+        <button class="cart-modal-close" id="cart-modal-close" aria-label="Close Cart">&times;</button>
+      </div>
+      <div class="cart-modal-body" id="cart-modal-body">
+        <div class="cart-empty-state" id="cart-empty-state">
+          <p class="empty-emoji">🛍️</p>
+          <p class="empty-text">Your cart is currently empty.</p>
+          <p class="empty-sub">Explore our curated collection above to add your favorite items!</p>
+        </div>
+        <ul class="cart-items-list" id="cart-items-list">
+          <!-- Dynamically populated via JavaScript -->
+        </ul>
+      </div>
+      <div class="cart-modal-footer" id="cart-modal-footer">
+        <div class="cart-total-row">
+          <span>Session Total:</span>
+          <span class="cart-total-price" id="cart-total-price">₹0</span>
+        </div>
+        <p class="cart-demo-note">✨ Beginner Demo Mode: No payment or checkout backend.</p>
+        <button type="button" class="btn btn-primary btn-block" id="cart-continue-btn">Continue Browsing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">Peach &amp; Co.</a>
+        <p class="footer-tagline">Thoughtful lifestyle goods crafted for slow mornings and peaceful spaces.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Collection</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 class="footer-heading">Boutique Hours</h4>
+        <p class="footer-text">Monday &ndash; Saturday: 10:00 AM &ndash; 7:00 PM</p>
+        <p class="footer-text">Sunday: 11:00 AM &ndash; 5:00 PM</p>
+        <p class="footer-text">Studio: hello@peachandco.boutique</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; 2026 Peach &amp; Co. Boutique. All rights reserved. Crafted for slow, lovely living.</p>
+        <p class="footer-credit">Handmade with HTML, CSS, &amp; Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
